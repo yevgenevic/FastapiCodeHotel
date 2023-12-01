@@ -13,5 +13,5 @@ router = APIRouter(
 
 @router.get("")
 async def get_bookings(user: Users = Depends(get_current_user)):
-    print(user, type(user, user.email))
+    return user
     # return await BookingDAO.find_all()
